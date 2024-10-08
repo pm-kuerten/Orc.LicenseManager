@@ -42,7 +42,7 @@ public class SimpleLicenseService : ISimpleLicenseService
     /// <returns><c>true</c> if the license is valid, <c>false</c> otherwise.</returns>
     public async Task<bool> ValidateOnServerAsync(string serverUrl)
     {
-        if (!EnsureLicenseExists())
+        if (!await EnsureLicenseExistsAsync())
         {
             return false;
         }
@@ -87,7 +87,7 @@ public class SimpleLicenseService : ISimpleLicenseService
     /// <remarks>Note that this method might show a dialog so must be run on the UI thread.</remarks>
     public async Task<bool> ValidateAsync()
     {
-        if (!EnsureLicenseExists())
+        if (!await EnsureLicenseExistsAsync())
         {
             return false;
         }
@@ -103,11 +103,11 @@ public class SimpleLicenseService : ISimpleLicenseService
         return !licenseValidation.HasErrors;
     }
 
-    private bool EnsureLicenseExists()
+    private async Task<bool> EnsureLicenseExistsAsync()
     {
         if (!_licenseService.AnyExistingLicense())
         {
-            _licenseVisualizerService.ShowLicense();
+            await _licenseVisualizerService.ShowLicenseAsync();
         }
 
         return _licenseService.AnyExistingLicense();
