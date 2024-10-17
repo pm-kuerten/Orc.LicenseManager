@@ -63,7 +63,7 @@ public class LicenseValidationService : ILicenseValidationService
         {
             var licenseObject = License.Load(license);
             var failureList = licenseObject.Validate()
-                .Signature(_applicationIdService.ApplicationId)
+                .Signature(_applicationIdService.ApplicationId ?? string.Empty)
                 .AssertValidLicense().ToList();
 
             if (failureList.Count > 0)
