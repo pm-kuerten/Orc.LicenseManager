@@ -18,7 +18,7 @@ namespace Orc.LicenseManager
     public class EmptyLicenseVisualizerService : Orc.LicenseManager.ILicenseVisualizerService
     {
         public EmptyLicenseVisualizerService() { }
-        public void ShowLicense() { }
+        public System.Threading.Tasks.Task ShowLicenseAsync() { }
     }
     public abstract class ExpirationBehaviorBase : Orc.LicenseManager.IExpirationBehavior
     {
@@ -39,6 +39,25 @@ namespace Orc.LicenseManager
     public interface IIdentificationService
     {
         string GetMachineId();
+    }
+    public interface ILicenseBuilder
+    {
+        Orc.LicenseManager.ILicenseBuilder As(Portable.Licensing.LicenseType type);
+        Portable.Licensing.License CreateAndSignWithPrivateKey(string privateKey, string passPhrase);
+        bool Equals(object obj);
+        Orc.LicenseManager.ILicenseBuilder ExpiresAt(System.DateTime date);
+        int GetHashCode();
+        System.Type GetType();
+        Orc.LicenseManager.ILicenseBuilder LicensedTo(System.Action<Portable.Licensing.Customer> configureCustomer);
+        Orc.LicenseManager.ILicenseBuilder LicensedTo(string name, string email);
+        Orc.LicenseManager.ILicenseBuilder LicensedTo(string name, string email, System.Action<Portable.Licensing.Customer> configureCustomer);
+        string? ToString();
+        Orc.LicenseManager.ILicenseBuilder WithAdditionalAttributes(System.Action<Portable.Licensing.LicenseAttributes> configureAdditionalAttributes);
+        Orc.LicenseManager.ILicenseBuilder WithAdditionalAttributes(System.Collections.Generic.IDictionary<string, string> additionalAttributes);
+        Orc.LicenseManager.ILicenseBuilder WithMaximumUtilization(int utilization);
+        Orc.LicenseManager.ILicenseBuilder WithProductFeatures(System.Action<Portable.Licensing.LicenseAttributes> configureProductFeatures);
+        Orc.LicenseManager.ILicenseBuilder WithProductFeatures(System.Collections.Generic.IDictionary<string, string> productFeatures);
+        Orc.LicenseManager.ILicenseBuilder WithUniqueIdentifier(System.Guid id);
     }
     public interface ILicenseInfoService
     {
@@ -78,7 +97,7 @@ namespace Orc.LicenseManager
     }
     public interface ILicenseVisualizerService
     {
-        void ShowLicense();
+        System.Threading.Tasks.Task ShowLicenseAsync();
     }
     public interface IMachineLicenseValidationService
     {
@@ -105,6 +124,22 @@ namespace Orc.LicenseManager
         public IdentificationService(Orc.SystemInfo.ISystemIdentificationService systemIdentificationService) { }
         public virtual string GetMachineId() { }
     }
+    public class LicenseBuilder : Orc.LicenseManager.ILicenseBuilder
+    {
+        public LicenseBuilder() { }
+        public Orc.LicenseManager.ILicenseBuilder As(Portable.Licensing.LicenseType type) { }
+        public Portable.Licensing.License CreateAndSignWithPrivateKey(string privateKey, string passPhrase) { }
+        public Orc.LicenseManager.ILicenseBuilder ExpiresAt(System.DateTime date) { }
+        public Orc.LicenseManager.ILicenseBuilder LicensedTo(System.Action<Portable.Licensing.Customer> configureCustomer) { }
+        public Orc.LicenseManager.ILicenseBuilder LicensedTo(string name, string email) { }
+        public Orc.LicenseManager.ILicenseBuilder LicensedTo(string name, string email, System.Action<Portable.Licensing.Customer> configureCustomer) { }
+        public Orc.LicenseManager.ILicenseBuilder WithAdditionalAttributes(System.Action<Portable.Licensing.LicenseAttributes> configureAdditionalAttributes) { }
+        public Orc.LicenseManager.ILicenseBuilder WithAdditionalAttributes(System.Collections.Generic.IDictionary<string, string> additionalAttributes) { }
+        public Orc.LicenseManager.ILicenseBuilder WithMaximumUtilization(int utilization) { }
+        public Orc.LicenseManager.ILicenseBuilder WithProductFeatures(System.Action<Portable.Licensing.LicenseAttributes> configureProductFeatures) { }
+        public Orc.LicenseManager.ILicenseBuilder WithProductFeatures(System.Collections.Generic.IDictionary<string, string> productFeatures) { }
+        public Orc.LicenseManager.ILicenseBuilder WithUniqueIdentifier(System.Guid id) { }
+    }
     public static class LicenseElements
     {
         public const string Expiration = "Expiration";
@@ -116,6 +151,7 @@ namespace Orc.LicenseManager
     {
         public static int GetMaximumConcurrentLicenses(this Portable.Licensing.License license) { }
     }
+    public static class LicenseHelper { }
     public class LicenseInfo : Catel.Data.ModelBase
     {
         public static readonly Catel.Data.IPropertyData ImageUriProperty;

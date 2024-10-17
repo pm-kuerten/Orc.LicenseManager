@@ -23,8 +23,8 @@ namespace Orc.LicenseManager
 {
     public class DialogLicenseVisualizerService : Orc.LicenseManager.ILicenseVisualizerService
     {
-        public DialogLicenseVisualizerService(Catel.Services.IUIVisualizerService uiVisualizerService, Orc.LicenseManager.ILicenseInfoService licenseInfoService, Catel.Services.IDispatcherService dispatcherService) { }
-        public void ShowLicense() { }
+        public DialogLicenseVisualizerService(Catel.Services.IUIVisualizerService uiVisualizerService, Orc.LicenseManager.ILicenseInfoService licenseInfoService) { }
+        public System.Threading.Tasks.Task ShowLicenseAsync() { }
     }
     public static class WindowExtensions
     {

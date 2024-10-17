@@ -39,10 +39,10 @@
             _licenseVisualizerService = licenseVisualizerService;
             _uiVisualizerService = uiVisualizerService;
 
-            RemoveLicense = new Command(OnRemoveLicenseExecute);
+            RemoveLicense = new TaskCommand(OnRemoveLicenseExecuteAsync);
             ValidateLicenseOnServer = new TaskCommand(OnValidateLicenseOnServerExecuteAsync, OnValidateLicenseOnServerCanExecute);
             ValidateLicenseOnLocalNetwork = new TaskCommand(OnValidateLicenseOnLocalNetworkExecuteAsync, OnValidateLicenseOnLocalNetworkCanExecute);
-            ShowLicense = new Command(OnShowLicenseExecute);
+            ShowLicense = new TaskCommand(OnShowLicenseExecuteAsync);
             ShowLicenseUsage = new TaskCommand(OnShowLicenseUsageExecuteAsync);
 
             ServerUri = string.Format("http://localhost:1815/api/license/validate");
@@ -59,14 +59,14 @@
 
         public string ServerUri { get; set; }
 
-        public Command RemoveLicense { get; private set; }
+        public TaskCommand RemoveLicense { get; private set; }
 
-        private void OnRemoveLicenseExecute()
+        private async Task OnRemoveLicenseExecuteAsync()
         {
             _licenseService.RemoveLicense(LicenseMode.CurrentUser);
             _licenseService.RemoveLicense(LicenseMode.MachineWide);
 
-            ShowLicenseDialog();
+            await ShowLicenseDialogAsync();
         }
 
         public TaskCommand ValidateLicenseOnServer { get; private set; }
@@ -121,11 +121,11 @@
             await _messageService.ShowAsync(string.Format("License is {0}valid, using '{1}' of '{2}' licenses", validationResult.IsValid ? string.Empty : "NOT ", validationResult.CurrentUsers.Count, validationResult.MaximumConcurrentUsers));
         }
 
-        public Command ShowLicense { get; private set; }
+        public TaskCommand ShowLicense { get; private set; }
 
-        private void OnShowLicenseExecute()
+        private Task OnShowLicenseExecuteAsync()
         {
-            _licenseVisualizerService.ShowLicense();
+            return _licenseVisualizerService.ShowLicenseAsync();
         }
 
         public TaskCommand ShowLicenseUsage { get; set; }
@@ -160,12 +160,12 @@
 
                 if (licenseValidation.HasErrors)
                 {
-                    ShowLicenseDialog();
+                    await ShowLicenseDialogAsync();
                 }
             }
             else
             {
-                ShowLicenseDialog();
+                await ShowLicenseDialogAsync();
             }
         }
 
@@ -189,9 +189,9 @@
             }
         }
 
-        private void ShowLicenseDialog()
+        private Task ShowLicenseDialogAsync()
         {
-            _licenseVisualizerService.ShowLicense();
+            return _licenseVisualizerService.ShowLicenseAsync();
         }
     }
 }
