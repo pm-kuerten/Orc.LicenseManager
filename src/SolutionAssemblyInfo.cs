@@ -5,9 +5,9 @@
 //------------------------------------------------------------------------------
 using System.Reflection;
 
-[assembly: AssemblyCompany("WildGums")]
-[assembly: AssemblyVersion("5.0.0")]
-[assembly: AssemblyFileVersion("5.0.0")]
-[assembly: AssemblyInformationalVersion("4.0.0-alpha.29")]
-[assembly: AssemblyCopyright("Copyright © WildGums 2014 - 2022")]
+[assembly: AssemblyCompany("pm-kuerten")]
+[assembly: AssemblyVersion("5.1.0")]
+[assembly: AssemblyFileVersion("5.1.0")]
+[assembly: AssemblyInformationalVersion("5.1.0-alpha.671")]
+[assembly: AssemblyCopyright("Copyright © pm-kuerten 2014 - 2024")]
 

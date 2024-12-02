@@ -5,7 +5,7 @@
 // Define the required parameters
 var Parameters = new Dictionary<string, object>();
 Parameters["SolutionName"] = "Orc.LicenseManager";
-Parameters["Company"] = "WildGums";
+Parameters["Company"] = "pm-kuerten";
 Parameters["RepositoryUrl"] = string.Format("https://github.com/{0}/{1}", GetBuildServerVariable("Company"), GetBuildServerVariable("SolutionName"));
 Parameters["StartYear"] = "2014";
 Parameters["UseVisualStudioPrerelease"] = "false";
