@@ -124,7 +124,7 @@ public class NetworkLicenseService : INetworkLicenseService
 
             foreach (var ipAddress in GetIpAddresses())
             {
-                var usages = await BroadcastMessageAsync(ipAddress, license.Signature, timeout);
+                var usages = await BroadcastMessageAsync(ipAddress, license.Signature ?? string.Empty, timeout);
                 licenseUsages.AddRange(usages);
             }
 
