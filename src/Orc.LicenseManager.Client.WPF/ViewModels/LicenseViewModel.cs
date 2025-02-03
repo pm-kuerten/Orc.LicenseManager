@@ -160,7 +160,11 @@ public class LicenseViewModel : ViewModelBase
     /// </summary>
     private void OnAboutSiteClickExecute()
     {
-        _processService.StartProcess(LicenseInfo.InfoUrl);
+        _processService.StartProcess(new ProcessContext
+        {
+            FileName = LicenseInfo.InfoUrl,
+            UseShellExecute = true
+        });
     }
 
     /// <summary>
@@ -168,7 +172,11 @@ public class LicenseViewModel : ViewModelBase
     /// </summary>
     private void OnPurchaseLinkClickExecute()
     {
-        _processService.StartProcess(LicenseInfo.PurchaseUrl);
+        _processService.StartProcess(new ProcessContext
+        {
+            FileName = LicenseInfo.PurchaseUrl,
+            UseShellExecute = true
+        });
     }
 
     /// <summary>
