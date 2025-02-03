@@ -13,60 +13,63 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AboutHeader" xml:space="preserve">
-    <value>About</value>
+    <value>Über</value>
   </data>
   <data name="Cancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>Abbrechen</value>
   </data>
   <data name="ClickToBuyLicense" xml:space="preserve">
-    <value>Click here to buy a license</value>
+    <value>Klicken Sie hier, um eine Lizenz zu kaufen</value>
   </data>
   <data name="Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Schließen</value>
   </data>
   <data name="DeleteLicense" xml:space="preserve">
-    <value>Delete license</value>
+    <value>Lizenz Löschen</value>
   </data>
   <data name="FailedToSaveLicense" xml:space="preserve">
-    <value>Failed to save license. Please try again or pick a different location.</value>
+    <value>Lizenz konnte nicht gespeichert werden. Bitte versuchen Sie es erneut oder wählen Sie einen anderen Ort.</value>
   </data>
   <data name="InsertLicenseHeader" xml:space="preserve">
-    <value>Insert license</value>
+    <value>Lizenz einfügen</value>
   </data>
   <data name="LicenceManagementHeader" xml:space="preserve">
-    <value>License management</value>
+    <value>Lizenzverwaltung</value>
   </data>
   <data name="LicensePropsHeader" xml:space="preserve">
-    <value>License properties</value>
+    <value>Lizenz-Eigenschaften</value>
   </data>
   <data name="PasteWithShortcut" xml:space="preserve">
-    <value>Paste (CTRL + V)</value>
+    <value>Einfügen (CTRL + V)</value>
   </data>
   <data name="PleasePaste" xml:space="preserve">
-    <value>Please paste the whole license in this window to verify the license.</value>
+    <value>Bitte fügen Sie die gesamte Lizenz in dieses Fenster ein, um die Lizenz zu überprüfen.</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Save</value>
+    <value>Speichern</value>
   </data>
   <data name="ShowClipboard" xml:space="preserve">
-    <value>Show clipboard</value>
+    <value>Zwischenablage anzeigen</value>
   </data>
   <data name="LicenseManager_LicenseView_TextBlock_Text_LicenseFor" xml:space="preserve">
-    <value>License for:</value>
+    <value>Lizenz für:</value>
   </data>
   <data name="LicenseManager_NetworkLicenseUsageWindow_TextBlock_Text_ItAppearsThatYouHaveReachedTheMaximumNumberOfConcurrentUsagesOfTheLicense" xml:space="preserve">
-    <value>It appears that you have reached the maximum number of concurrent usages of the license.</value>
+    <value>Es scheint, dass Sie die maximale Anzahl der gleichzeitigen Nutzungen der Lizenz erreicht haben.</value>
   </data>
   <data name="LicenseManager_NetworkLicenseUsageWindow_TextBlock_Text_BelowIsAListOfCurrentUsagesOfYourLicenseYouCanWaitForALicenseToBecomeAvailableByKeepingThisWindowOpenToSpeedUpTheProcessYouCanContactOneOfThePersonsBelowToAskThemToCloseTheSoftware" xml:space="preserve">
-    <value>Below is a list of current usages of your license. You can wait for a license to become available by keeping this window open. To speed up the process, you can contact one of the persons below to ask them to close the software. </value>
+    <value>Nachfolgend finden Sie eine Liste der aktuellen Verwendungen Ihrer Lizenz. Sie können warten, bis eine Lizenz verfügbar wird, indem Sie dieses Fenster geöffnet lassen. Um den Prozess zu beschleunigen, können Sie sich an eine der unten genannten Personen wenden, um sie zu bitten, die Software zu schließen. </value>
   </data>
   <data name="LicenseManager_NetworkLicenseUsageWindow_Button_Content_CloseApplication" xml:space="preserve">
-    <value>Close application</value>
+    <value>Anwendung schließen</value>
   </data>
   <data name="LicenseManager_NetworkLicenseUsageWindow_Button_Content_BuyMoreLicenses" xml:space="preserve">
-    <value>Buy more licenses</value>
+    <value>Mehr Lizenzen kaufen</value>
   </data>
   <data name="LicenseManager_NetworkLicenseUsageWindow_TextBlock_ConverterParameter_YouAreEntitledToConcurrentUsagesOfTheLicenseButItLooksThisAmountIsAlreadyUsed" xml:space="preserve">
-    <value>You are entitled to {0} concurrent usages of the license, but it looks this amount is already used.</value>
+    <value>Sie haben Anspruch auf {0} gleichzeitige Nutzungen der Lizenz, aber es sieht so aus, als ob diese Menge bereits verbraucht ist.</value>
+  </data>
+  <data name="NoTextWasPasted" xml:space="preserve">
+    <value>Es wurde kein Text in das Fenster eingefügt</value>
   </data>
 </root>

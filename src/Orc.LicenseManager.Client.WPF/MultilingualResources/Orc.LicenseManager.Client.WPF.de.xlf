@@ -8,102 +8,83 @@
       <group id="ORC.LICENSEMANAGER.CLIENT.WPF/PROPERTIES/RESOURCES.RESX" datatype="resx">
         <trans-unit id="AboutHeader" translate="yes" xml:space="preserve">
           <source>About</source>
-          <target state="needs-review-translation">About</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Über</target>
         </trans-unit>
         <trans-unit id="Cancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
-          <target state="needs-review-translation">Cancel</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Abbrechen</target>
         </trans-unit>
         <trans-unit id="ClickToBuyLicense" translate="yes" xml:space="preserve">
           <source>Click here to buy a license</source>
-          <target state="needs-review-translation">Click here to buy a license</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Klicken Sie hier, um eine Lizenz zu kaufen</target>
         </trans-unit>
         <trans-unit id="Close" translate="yes" xml:space="preserve">
           <source>Close</source>
-          <target state="needs-review-translation">Close</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Schließen</target>
         </trans-unit>
         <trans-unit id="DeleteLicense" translate="yes" xml:space="preserve">
           <source>Delete license</source>
-          <target state="needs-review-translation">Delete license</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Lizenz Löschen</target>
         </trans-unit>
         <trans-unit id="FailedToSaveLicense" translate="yes" xml:space="preserve">
           <source>Failed to save license. Please try again or pick a different location.</source>
-          <target state="needs-review-translation">Failed to save license. Please try again or pick a different location.</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Lizenz konnte nicht gespeichert werden. Bitte versuchen Sie es erneut oder wählen Sie einen anderen Ort.</target>
         </trans-unit>
         <trans-unit id="InsertLicenseHeader" translate="yes" xml:space="preserve">
           <source>Insert license</source>
-          <target state="needs-review-translation">Insert license</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Lizenz einfügen</target>
         </trans-unit>
         <trans-unit id="LicenceManagementHeader" translate="yes" xml:space="preserve">
           <source>License management</source>
-          <target state="needs-review-translation">License management</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Lizenzverwaltung</target>
         </trans-unit>
         <trans-unit id="LicensePropsHeader" translate="yes" xml:space="preserve">
           <source>License properties</source>
-          <target state="needs-review-translation">License properties</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Lizenz-Eigenschaften</target>
         </trans-unit>
         <trans-unit id="PasteWithShortcut" translate="yes" xml:space="preserve">
           <source>Paste (CTRL + V)</source>
-          <target state="needs-review-translation">Paste (CTRL + V)</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Einfügen (CTRL + V)</target>
         </trans-unit>
         <trans-unit id="PleasePaste" translate="yes" xml:space="preserve">
           <source>Please paste the whole license in this window to verify the license.</source>
-          <target state="needs-review-translation">Please paste the whole license in this window to verify the license.</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Bitte fügen Sie die gesamte Lizenz in dieses Fenster ein, um die Lizenz zu überprüfen.</target>
         </trans-unit>
         <trans-unit id="Save" translate="yes" xml:space="preserve">
           <source>Save</source>
-          <target state="needs-review-translation">Save</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Speichern</target>
         </trans-unit>
         <trans-unit id="ShowClipboard" translate="yes" xml:space="preserve">
           <source>Show clipboard</source>
-          <target state="needs-review-translation">Show clipboard</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Zwischenablage anzeigen</target>
         </trans-unit>
         <trans-unit id="LicenseManager_LicenseView_TextBlock_Text_LicenseFor" translate="yes" xml:space="preserve">
           <source>License for:</source>
-          <target state="needs-review-translation">License for:</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Lizenz für:</target>
         </trans-unit>
         <trans-unit id="LicenseManager_NetworkLicenseUsageWindow_TextBlock_Text_ItAppearsThatYouHaveReachedTheMaximumNumberOfConcurrentUsagesOfTheLicense" translate="yes" xml:space="preserve">
           <source>It appears that you have reached the maximum number of concurrent usages of the license.</source>
-          <target state="needs-review-translation">It appears that you have reached the maximum number of concurrent usages of the license.</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Es scheint, dass Sie die maximale Anzahl der gleichzeitigen Nutzungen der Lizenz erreicht haben.</target>
         </trans-unit>
         <trans-unit id="LicenseManager_NetworkLicenseUsageWindow_TextBlock_Text_BelowIsAListOfCurrentUsagesOfYourLicenseYouCanWaitForALicenseToBecomeAvailableByKeepingThisWindowOpenToSpeedUpTheProcessYouCanContactOneOfThePersonsBelowToAskThemToCloseTheSoftware" translate="yes" xml:space="preserve">
           <source>Below is a list of current usages of your license. You can wait for a license to become available by keeping this window open. To speed up the process, you can contact one of the persons below to ask them to close the software. </source>
-          <target state="needs-review-translation">Below is a list of current usages of your license. You can wait for a license to become available by keeping this window open. To speed up the process, you can contact one of the persons below to ask them to close the software. </target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Nachfolgend finden Sie eine Liste der aktuellen Verwendungen Ihrer Lizenz. Sie können warten, bis eine Lizenz verfügbar wird, indem Sie dieses Fenster geöffnet lassen. Um den Prozess zu beschleunigen, können Sie sich an eine der unten genannten Personen wenden, um sie zu bitten, die Software zu schließen. </target>
         </trans-unit>
         <trans-unit id="LicenseManager_NetworkLicenseUsageWindow_Button_Content_CloseApplication" translate="yes" xml:space="preserve">
           <source>Close application</source>
-          <target state="needs-review-translation">Close application</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Anwendung schließen</target>
         </trans-unit>
         <trans-unit id="LicenseManager_NetworkLicenseUsageWindow_Button_Content_BuyMoreLicenses" translate="yes" xml:space="preserve">
           <source>Buy more licenses</source>
-          <target state="needs-review-translation">Buy more licenses</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Mehr Lizenzen kaufen</target>
         </trans-unit>
         <trans-unit id="LicenseManager_NetworkLicenseUsageWindow_TextBlock_ConverterParameter_YouAreEntitledToConcurrentUsagesOfTheLicenseButItLooksThisAmountIsAlreadyUsed" translate="yes" xml:space="preserve">
           <source>You are entitled to {0} concurrent usages of the license, but it looks this amount is already used.</source>
-          <target state="needs-review-translation">You are entitled to {0} concurrent usages of the license, but it looks this amount is already used.</target>
-          <note from="MultilingualUpdate" priority="2">When the XLIFF file support was added via MAT, existing resources were found and auto-imported.  This source and target string contained the same value so the resource was marked as 'Needs review' to ensure the translation could be easily reviewed.</note>
+          <target state="translated">Sie haben Anspruch auf {0} gleichzeitige Nutzungen der Lizenz, aber es sieht so aus, als ob diese Menge bereits verbraucht ist.</target>
         </trans-unit>
         <trans-unit id="NoTextWasPasted" translate="yes" xml:space="preserve">
           <source>No text was pasted into the window</source>
-          <target state="new">No text was pasted into the window</target>
+          <target state="translated">Es wurde kein Text in das Fenster eingefügt</target>
         </trans-unit>
       </group>
     </body>

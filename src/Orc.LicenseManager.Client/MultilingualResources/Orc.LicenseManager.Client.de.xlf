@@ -8,11 +8,11 @@
       <group id="ORC.LICENSEMANAGER.CLIENT/PROPERTIES/RESOURCES.RESX" datatype="resx">
         <trans-unit id="AllUsers" translate="yes" xml:space="preserve">
           <source>All users</source>
-          <target state="new">All users</target>
+          <target state="translated">Alle Nutzer</target>
         </trans-unit>
         <trans-unit id="CurrentUser" translate="yes" xml:space="preserve">
           <source>Current user</source>
-          <target state="new">Current user</target>
+          <target state="translated">Aktueller Nutzer</target>
         </trans-unit>
       </group>
     </body>
