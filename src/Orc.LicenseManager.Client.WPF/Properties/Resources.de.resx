@@ -43,7 +43,7 @@
     <value>Einfügen (CTRL + V)</value>
   </data>
   <data name="PleasePaste" xml:space="preserve">
-    <value>Bitte fügen Sie die gesamte Lizenz in dieses Fenster ein, um die Lizenz zu überprüfen.</value>
+    <value>Bitte fügen Sie den Lizenztext ein oder legen Sie die Lizenzdatei hier ab, um sie zu überprüfen.</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Speichern</value>
@@ -71,5 +71,8 @@
   </data>
   <data name="NoTextWasPasted" xml:space="preserve">
     <value>Es wurde kein Text in das Fenster eingefügt</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>Datei konnte nicht gefunden werden</value>
   </data>
 </root>

@@ -47,8 +47,8 @@
           <target state="translated">Einfügen (CTRL + V)</target>
         </trans-unit>
         <trans-unit id="PleasePaste" translate="yes" xml:space="preserve">
-          <source>Please paste the whole license in this window to verify the license.</source>
-          <target state="translated">Bitte fügen Sie die gesamte Lizenz in dieses Fenster ein, um die Lizenz zu überprüfen.</target>
+          <source>Please paste the license text or drop the license file here to verify it.</source>
+          <target state="translated">Bitte fügen Sie den Lizenztext ein oder legen Sie die Lizenzdatei hier ab, um sie zu überprüfen.</target>
         </trans-unit>
         <trans-unit id="Save" translate="yes" xml:space="preserve">
           <source>Save</source>
@@ -85,6 +85,10 @@
         <trans-unit id="NoTextWasPasted" translate="yes" xml:space="preserve">
           <source>No text was pasted into the window</source>
           <target state="translated">Es wurde kein Text in das Fenster eingefügt</target>
+        </trans-unit>
+        <trans-unit id="FileNotFound" translate="yes" xml:space="preserve">
+          <source>File not found</source>
+          <target state="translated">Datei konnte nicht gefunden werden</target>
         </trans-unit>
       </group>
     </body>

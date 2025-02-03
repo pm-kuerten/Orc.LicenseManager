@@ -115,6 +115,15 @@ namespace Orc.LicenseManager.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to File not found.
+        /// </summary>
+        internal static string FileNotFound {
+            get {
+                return ResourceManager.GetString("FileNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Insert license.
         /// </summary>
         internal static string InsertLicenseHeader {
@@ -218,7 +227,7 @@ namespace Orc.LicenseManager.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please paste the whole license in this window to verify the license..
+        ///   Looks up a localized string similar to Please paste the license text or drop the license file here to verify it..
         /// </summary>
         internal static string PleasePaste {
             get {

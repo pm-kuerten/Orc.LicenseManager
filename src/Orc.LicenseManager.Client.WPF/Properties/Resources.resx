@@ -148,7 +148,7 @@
     <value>Paste (CTRL + V)</value>
   </data>
   <data name="PleasePaste" xml:space="preserve">
-    <value>Please paste the whole license in this window to verify the license.</value>
+    <value>Please paste the license text or drop the license file here to verify it.</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
@@ -176,5 +176,8 @@
   </data>
   <data name="NoTextWasPasted" xml:space="preserve">
     <value>No text was pasted into the window</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>File not found</value>
   </data>
 </root>

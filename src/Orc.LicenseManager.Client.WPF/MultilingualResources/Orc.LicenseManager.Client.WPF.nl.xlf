@@ -47,8 +47,9 @@
           <target state="translated">Plakken (CTRL + V)</target>
         </trans-unit>
         <trans-unit id="PleasePaste" translate="yes" xml:space="preserve">
-          <source>Please paste the whole license in this window to verify the license.</source>
-          <target state="translated">Plak a.u.b. de gehele licentie in dit scherm om de licentie te verifieren.</target>
+          <source>Please paste the license text or drop the license file here to verify it.</source>
+          <target state="needs-review-translation">Plak a.u.b. de gehele licentie in dit scherm om de licentie te verifieren.</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="Save" translate="yes" xml:space="preserve">
           <source>Save</source>
@@ -91,6 +92,10 @@
         <trans-unit id="NoTextWasPasted" translate="yes" xml:space="preserve">
           <source>No text was pasted into the window</source>
           <target state="new">No text was pasted into the window</target>
+        </trans-unit>
+        <trans-unit id="FileNotFound" translate="yes" xml:space="preserve">
+          <source>File not found</source>
+          <target state="new">File not found</target>
         </trans-unit>
       </group>
     </body>

@@ -10,6 +10,7 @@ using Catel;
 using Catel.Logging;
 using Catel.MVVM;
 using Catel.Services;
+using Orc.FileSystem;
 
 /// <summary>
 /// View model for a single License.
@@ -29,9 +30,12 @@ public class LicenseViewModel : ViewModelBase
     private readonly ILanguageService _languageService;
     private readonly ILicenseModeService _licenseModeService;
 
+    private readonly IFileService _fileService;
+
+
     public LicenseViewModel(LicenseInfo licenseInfo, INavigationService navigationService, IProcessService processService,
-        ILicenseService licenseService, ILicenseValidationService licenseValidationService, IUIVisualizerService uiVisualizerService, 
-        IMessageService messageService, ILanguageService languageService, ILicenseModeService licenseModeService)
+        ILicenseService licenseService, ILicenseValidationService licenseValidationService, IUIVisualizerService uiVisualizerService,
+        IMessageService messageService, ILanguageService languageService, ILicenseModeService licenseModeService, IFileService fileService)
     {
         ArgumentNullException.ThrowIfNull(licenseInfo);
         ArgumentNullException.ThrowIfNull(navigationService);
@@ -42,6 +46,7 @@ public class LicenseViewModel : ViewModelBase
         ArgumentNullException.ThrowIfNull(messageService);
         ArgumentNullException.ThrowIfNull(languageService);
         ArgumentNullException.ThrowIfNull(licenseModeService);
+        ArgumentNullException.ThrowIfNull(fileService);
 
         _navigationService = navigationService;
         _processService = processService;
@@ -51,6 +56,7 @@ public class LicenseViewModel : ViewModelBase
         _messageService = messageService;
         _languageService = languageService;
         _licenseModeService = licenseModeService;
+        _fileService = fileService;
 
         LicenseInfo = licenseInfo;
         Title = licenseInfo.Title;
@@ -58,6 +64,7 @@ public class LicenseViewModel : ViewModelBase
         XmlData = new ObservableCollection<XmlDataModel>();
 
         Paste = new TaskCommand(OnPasteExecuteAsync);
+        PasteFromFile = new TaskCommand<string>(OnPasteFromFileExecuteAsync);
         ShowClipboard = new TaskCommand(OnShowClipboardExecuteAsync);
         PurchaseLinkClick = new Command(OnPurchaseLinkClickExecute);
         AboutSiteClick = new Command(OnAboutSiteClickExecute);
@@ -111,6 +118,11 @@ public class LicenseViewModel : ViewModelBase
     /// Gets the Paste command.
     /// </summary>
     public TaskCommand Paste { get; }
+
+    /// <summary>
+    /// Gets the PasteFromFile command.
+    /// </summary>
+    public TaskCommand<string> PasteFromFile { get; }
 
     /// <summary>
     /// List of xml Data, only populated when license was valid.
@@ -200,9 +212,9 @@ public class LicenseViewModel : ViewModelBase
     protected override async Task<bool> SaveAsync()
     {
         var licenseExists = _licenseService.LicenseExists(LicenseMode);
-            
+
         var oppositeLicenseMode = LicenseMode.ToOpposite();
-            
+
         var oppositeLicenseExists = _licenseService.LicenseExists(oppositeLicenseMode);
 
         if (licenseExists && !oppositeLicenseExists)
@@ -372,9 +384,7 @@ public class LicenseViewModel : ViewModelBase
             if (string.IsNullOrWhiteSpace(license))
             {
                 ShowFailure = true;
-
-                // TODO: Read from resources (language service preferred)
-                FailureMessage = LanguageHelper.GetString("NoTextWasPasted");
+                FailureMessage = _languageService.GetString("NoTextWasPasted");
                 return;
             }
 
@@ -386,6 +396,34 @@ public class LicenseViewModel : ViewModelBase
                 {
                     await SaveAsync();
                 }
+            }
+        }
+    }
+
+    private async Task OnPasteFromFileExecuteAsync(string? path)
+    {
+        ArgumentException.ThrowIfNullOrEmpty(path, nameof(path));
+        if (!_fileService.Exists(path))
+        {
+            ShowFailure = true;
+            FailureMessage = _languageService.GetString("FileNotFound");
+            return;
+        }
+        var license = await _fileService.ReadAllTextAsync(path);
+        if (string.IsNullOrWhiteSpace(license))
+        {
+            ShowFailure = true;
+            FailureMessage = _languageService.GetString("NoTextWasPasted");
+            return;
+        }
+
+        await ApplyLicenseAsync(license);
+
+        if (!string.IsNullOrEmpty(LicenseInfo.Key))
+        {
+            if (LicenseExists)
+            {
+                await SaveAsync();
             }
         }
     }
